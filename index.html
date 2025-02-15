@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="menu-container" id="menu">
+      <h1 class="titulo">Simon Says</h1>
+      <div class="botones-menu">
+        <input
+          type="text"
+          id="nombre-jugador"
+          placeholder="Ingresa tu nombre"
+          required
+        />
+        <button class="boton-menu" id="jugar" disabled>Jugar</button>
+        <button class="boton-menu" id="como-jugar">Cómo Jugar</button>
+        <button class="boton-menu" id="puntuaciones">Puntuaciones</button>
+      </div>
+    </div>
+
+    <div class="simon-container" id="juego" style="display: none">
+      <button class="simon-button verde" id="verde"></button>
+      <button class="simon-button rojo" id="rojo"></button>
+      <button class="simon-button azul" id="azul"></button>
+      <button class="simon-button amarillo" id="amarillo"></button>
+
+      <div class="puntuador" id="puntuador">Ronda: 0</div>
+    </div>
+
+    <div class="mensaje-terminado" id="mensaje-terminado" style="display: none">
+      <h2>Juego Terminado</h2>
+      <p id="mensaje-puntaje"></p>
+      <button class="boton-menu" id="reiniciar">Reiniciar</button>
+    </div>
+
+    <div class="tabla-puntajes" id="tabla-puntajes" style="display: none">
+      <h2>Mejores Puntajes</h2>
+      <table id="tabla">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Puntaje</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+      </table>
+      <button class="boton-menu" id="cerrar-tabla">Cerrar</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
