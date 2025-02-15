@@ -22,19 +22,52 @@
       </div>
     </div>
 
-    <div class="simon-container" id="juego" style="display: none">
-      <button class="simon-button verde" id="verde"></button>
-      <button class="simon-button rojo" id="rojo"></button>
-      <button class="simon-button azul" id="azul"></button>
-      <button class="simon-button amarillo" id="amarillo"></button>
+    <div class="como-jugar-modal" id="como-jugar-modal" style="display: none">
+      <div class="modal-content">
+        <h2>Cómo Jugar</h2>
+        <p>El juego funciona de la siguiente manera:</p>
+        <ol>
+          <li>Se mostrará una secuencia de colores y sonidos.</li>
+          <li>Debes repetir la secuencia en el mismo orden.</li>
+          <li>En cada ronda se agregará un color nuevo.</li>
+          <li>
+            El objetivo es recordar la secuencia lo más larga posible sin
+            equivocarte.
+          </li>
+          <li>
+            Si cometes un error, el juego terminará y se guardará tu puntaje.
+          </li>
+        </ol>
+        <p>¡Sigue la secuencia y diviértete!</p>
+        <button class="boton-menu" id="cerrar-como-jugar">Cerrar</button>
+      </div>
+    </div>
 
-      <div class="puntuador" id="puntuador">Ronda: 0</div>
+    <div id="game-container" style="display: none">
+      <div id="nombre-display" class="nombre-display"></div>
+
+      <div id="juego-wrapper">
+        <div class="simon-container" id="juego">
+          <button class="simon-button verde" id="verde"></button>
+          <button class="simon-button rojo" id="rojo"></button>
+          <button class="simon-button azul" id="azul"></button>
+          <button class="simon-button amarillo" id="amarillo"></button>
+
+          <div class="puntuador" id="puntuador">0</div>
+        </div>
+        <button class="boton-menu" id="volver-menu-juego" style="display: none">
+          Menu
+        </button>
+      </div>
     </div>
 
     <div class="mensaje-terminado" id="mensaje-terminado" style="display: none">
       <h2>Juego Terminado</h2>
       <p id="mensaje-puntaje"></p>
       <button class="boton-menu" id="reiniciar">Reiniciar</button>
+      <button class="boton-menu" id="volver-menu-terminado">
+        Volver al Menú
+      </button>
     </div>
 
     <div class="tabla-puntajes" id="tabla-puntajes" style="display: none">
@@ -42,6 +75,7 @@
       <table id="tabla">
         <thead>
           <tr>
+            <th>#</th>
             <th>Nombre</th>
             <th>Puntaje</th>
           </tr>
