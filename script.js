@@ -53,6 +53,7 @@ function iniciarJuego() {
   jugando = true;
   ronda = 0;
   secuencia = [];
+  indiceSecuenciaJugador = 0;
   puntuador.textContent = "0";
   siguienteRonda();
 }
